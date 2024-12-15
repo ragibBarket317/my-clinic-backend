@@ -10,11 +10,8 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: true,
-    credentials: true,
+    origin: "*",
   },
-  allowEIO3: true,
-  // Enables compatibility with polling
 });
 // Socket.IO setup
 const userSocketMap = {};
